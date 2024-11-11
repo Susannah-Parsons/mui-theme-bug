@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@mui/material/styles";
 import {lightTheme} from "./myTheme";
-import { CssBaseline } from "@mui/material";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,11 +15,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" style={{height:"100%"}}>
-      <body>
+      <body style={{height:"100%"}}>
         <ThemeProvider theme={lightTheme}>
-          <CssBaseline>
             {children}
-          </CssBaseline>
         </ThemeProvider>
       </body>
     </html>
